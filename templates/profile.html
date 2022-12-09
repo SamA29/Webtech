@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2> Profile Page</h2>
+<div>
+	<p>Account Details:</p>
+	<table>
+		<tr>
+			<td>Username:</td>
+			<td>{{ account['username'] }}</td>
+		</tr>
+		<tr>
+			<td>password:</td>
+			<td>Edit Password</td>
+		</tr>
+		<tr>
+			<td> email:</td>
+			<td>{{ account ['email'] }}</td>
+		</tr>
+		<tr>
+			<td> Background image</td>
+			<td><form action="" method="post" name="form" enctype="multipart/form-data">
+			<input type="file" name="imgloc" />
+			<input type="submit" name="submit" id="submit"/>
+			</form></td>
+		</tr>
+	</table>
+</div>
+
+{% endblock %}
